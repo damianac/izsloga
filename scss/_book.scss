@@ -1,29 +1,28 @@
 .book {
-    position: absolute;
-    top: -123px;
-    bottom: 0;
-    left: -160px;
-    right: 0;
     margin: auto;
     width: 18.5rem;
-    height: 12.5rem;
+    height: 25.3rem;
+    @media (min-width: 500px) {
+      width: 26.5rem;
+      height: 36.3rem;
+    }
     perspective: 70rem;
-    transform: rotate(180deg) scale(2.5);
+    transform: rotate(180deg);
   }
   .cover {
     background-image: url('../img/cover_front.png');
     background-size: cover;
     transform: rotateY(0deg);
-    width: 9.25rem;
-    height: 12.5rem;
+    width: 95%;
+    height: 95%;
   }
   .page {
     top: 0.25rem;
     left: 0.25rem;
     background-color: #e9e6c4;
     transform: rotateY(0deg);
-    width: 9rem;
-    height: 12rem;
+    width: 93%;
+    height: 93%;
     text-align: right;
     font-size: 8px;
     color: #777;
@@ -41,9 +40,11 @@
     box-sizing: border-box;
   }
   .btn {
-      position: absolute;
-      top: 220px;
-      left: 185px;
+    max-width: 300px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 10px;
   }
   .cover.turn.animation {
     animation: bookCover 3s forwards;
